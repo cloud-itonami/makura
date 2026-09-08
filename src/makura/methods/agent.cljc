@@ -4,7 +4,7 @@
   G8 FR-chemistry exclusion (no PBDE/TDCPP/TCEP/Sb₂O₃), G11 KPI caps (mass/dims/combined), G14 no
   embedded sensors, G17/G18 USDC + 10% tithe settlement (stops at :intent). Pure compute; the
   Murakumo llm host binding is unused here (the omitted leg)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def TITHE-BPS 1000)
 (def ^:private MAX-FOAM-MASS-KG 2.0)
@@ -37,13 +37,13 @@
     :else {"ok" true "reason" "exposure within ceilings"}))
 
 (defn fr-chemistry-ok [chemistry-terms]
-  (let [hits (filterv #(contains? PROHIBITED-FR (str/lower-case (str/trim %))) chemistry-terms)]
+  (let [hits (filterv #(contains? PROHIBITED-FR (str/lower (str/trim %))) chemistry-terms)]
     (if (seq hits)
       {"ok" false "reason" (str "prohibited FR chemistry: " hits " (G8)")}
       {"ok" true "reason" "FR-free"})))
 
 (defn bom-no-embedded [bom-items]
-  (let [hits (filterv (fn [i] (some #(str/includes? (str/lower-case (str/trim i)) %) PROHIBITED-EMBEDDED)) bom-items)]
+  (let [hits (filterv (fn [i] (some #(str/includes? (str/lower (str/trim i)) %) PROHIBITED-EMBEDDED)) bom-items)]
     (if (seq hits)
       {"ok" false "reason" (str "embedded electronics prohibited: " hits " (G14)")}
       {"ok" true "reason" "no embedded sensors"})))
