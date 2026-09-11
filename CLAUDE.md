@@ -161,8 +161,8 @@ Live deployment is outside R0 and remains Council/ADR-gated.
 ## Testing (R0)
 
 ```sh
-bb test
-bb audit
+kbb -M:test
+kbb -M:audit
 ```
 
 ## Related Files

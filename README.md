@@ -131,8 +131,8 @@ Schema details deferred to R1 ADR.
 - `wire/` — JSON/JSON-LD interoperability snapshots
 
 ```sh
-bb test
-bb audit
+kbb -M:test
+kbb -M:audit
 ```
 
 Python, Go/TinyGo, requirements files, and shell deployment/test wrappers are
