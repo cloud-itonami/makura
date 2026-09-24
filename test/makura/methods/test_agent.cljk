@@ -2,7 +2,7 @@
   "makura 枕 — canonical agent gate tests.
   Offline: KPI caps (G11), isocyanate exposure (G6), FR-chemistry exclusion (G8), no-embedded-
   sensors (G14), USDC + tithe settlement (G17/G18)."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [makura.methods.agent :as agent]))
 
 (deftest test-kpi-mass-cap

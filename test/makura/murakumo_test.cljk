@@ -1,5 +1,5 @@
 (ns makura.murakumo-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [makura.murakumo :as makura]))
 
 (def full-attestations
