@@ -1,5 +1,5 @@
 (ns makura.test-runner
-  (:require [clojure.test :as t]
+  (:require [kotoba.test :as t]
             [makura.murakumo-test]
             [makura.methods.test-agent]
             [makura.methods.test-charter-gates]))
