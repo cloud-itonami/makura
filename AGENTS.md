@@ -1,4 +1,4 @@
-# com-etzhayyim-makura — CLAUDE.md
+# com-etzhayyim-makura — AGENTS.md
 
 ## Identity
 
@@ -171,4 +171,4 @@ kbb -M:audit
 - `/90-docs/adr/2605261115-makura-foam-pillow-tier-b-actor-r0.md` — Master ADR
 - `/orgs/etzhayyim/com-etzhayyim-tatekata/README.md` — R2 yard-sharing partner
 - `/orgs/etzhayyim/com-etzhayyim-kuni-umi/README.md` — robotics class inheritance
-- `/CLAUDE.md` — Religious-corp status table
+- `/AGENTS.md` — Religious-corp status table
